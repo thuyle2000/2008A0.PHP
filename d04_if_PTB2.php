@@ -15,6 +15,7 @@
 <body>
     <div class="container">
         <h2>Giai Phuong trinh bac 2 : ax<sup>2</sup> + bx + c = 0 </h2>
+        <hr>
 
         <form action="">
             Nhap he so a : <br>
@@ -30,7 +31,38 @@
             <input type="reset" value="Reset" class="btn btn-info">
 
         </form>
+
+        <?php
+        if (isset($_GET["btOK"]) == true) {
+            //doc gia tri cua cac o ha, hb, hc
+            $a = $_GET["ha"];
+            $b = $_GET["hb"];
+            $c = $_GET["hc"];
+            echo "<br><br>";
+            echo "<hr>";
+            echo "<h2> Nghiem cua phuong trinh bac 2: " . $a . "x<sup>2</sup> + " . $b . "x + " . $c . " = 0 </h2>";
+
+            $delta = $b*$b - 4*$a*$c;
+            if($delta <0){
+                echo "<p> Phuong trinh Vo nghiem ! </p>";
+            }
+            else if($delta ==0){
+                echo "<p> Phuong trinh co nghiem kep : x1 = x2 = ". (-$b/(2*$a));
+            }
+            else{
+                $x1 = (-$b + sqrt($delta)) / (2*$a);
+                $x2 = (-$b - sqrt($delta)) / (2*$a);
+                echo "<p> Phuong trinh co 2 nghiem phan biet : </p>";
+                echo " x1  = ". $x1 . "<br>";
+                echo " x2  = ". $x2 . "<br>";
+            }
+
+        }
+
+        ?>
+
     </div>
 </body>
+
 
 </html>
