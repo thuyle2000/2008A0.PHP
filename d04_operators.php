@@ -23,8 +23,29 @@
 
         // $a += $b;
         $a .= $b;
-        
-        echo "$a";
+
+        echo "$a <br><br>";
+        $x = 10;
+        echo "x = $x <br>";
+        echo "x++ = " . $x++ . "<br>";
+        echo "x = $x <br><br>";
+
+        echo "++x = " . ++$x . "<br>";
+        echo "x = $x <br><br>";
+
+        echo "<hr>";
+        $x = 's';
+        for ($i = 0; $i <= 10; $i++) {
+            echo $x++ . "<br>";
+        }
+
+        echo "<hr>";
+        //demo phep toan dieu kien 3 ngoi
+        $x =25; $y = 10;
+        $min = ($x < $y) ? $x : $y ;
+        $max = ($x > $y) ? $x : $y ;
+        echo "x = $x , y= $y <br>";
+        echo "max(x,y) = $max - min(x,y) = $min <br>";
 
         ?>
 
