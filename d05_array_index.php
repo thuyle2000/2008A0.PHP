@@ -18,7 +18,7 @@
         <hr>
         <?php
 
-        //khai bao 1 mang co index la so nguyen
+        //khai bao 1 mang co index la so nguyen bang ham array()
         $a = array("Dung", "Thu", "Phuc", "Thinh", "Thien", "Nhan", "Thang", "Tam");
 
         echo "<h3>Danh sach sinh vien</h3>";
@@ -26,7 +26,18 @@
             echo "$key ,  $value  <br>";
         }
 
-        
+
+        //khai bao mang mon hoc bang cu phap dinh danh
+        $modules = ["Java 1", "Java 2", "PHP" , "SQL Server"];
+        echo "<br>";
+        echo "<h3>Danh sach cac mon hoc </h3>";
+        echo "<ul>";
+        for($i=0; $i<count($modules); $i++){
+            echo "<li> $modules[$i] </li>";
+        }
+        echo "</ul>";
+
+
         ?>
 
     </div>

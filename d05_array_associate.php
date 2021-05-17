@@ -19,14 +19,24 @@
         <?php
 
         //khai bao 1 mang co index la so nguyen
-        $a = array("S01"=>"Dung","S12"=> "Thu","S08"=> "Phuc", "S09"=>"Thinh","S10"=> "Thien","S03"=> "Nhan","S05"=> "Thang", "S21"=>"Tam");
+        $a = array("S01" => "Dung", "S12" => "Thu", "S08" => "Phuc", "S09" => "Thinh", "S10" => "Thien", "S03" => "Nhan", "S05" => "Thang", "S21" => "Tam");
 
         echo "<h3>Danh sach sinh vien</h3>";
         foreach ($a as $key => $value) {
             echo "$key ,  $value  <br>";
         }
 
-        
+
+        //khai bao mang mon hoc bang cu phap dinh danh
+        $modules = ["M1" => "Java 1", "M2" => "Java 2", "M3" => "PHP", "M6" => "SQL Server"];
+        echo "<br>";
+        echo "<h3>Danh sach cac mon hoc </h3>";
+        echo "<ul>";
+        foreach ($modules as $key => $value) {
+            echo "<li>$key, $value </li>";
+        }
+        echo "</ul>";
+
         ?>
 
     </div>
