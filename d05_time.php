@@ -40,6 +40,10 @@ if(isset($_GET["btOK"])){
 
     echo "You are $age years old. <br>";
 
+    // echo $a_bd;  // ERROR !
+    // echo "<pre>";
+    // print_r($a_bd);
+    // var_dump($a_bd);
 }
 
 
