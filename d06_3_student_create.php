@@ -54,8 +54,8 @@ if(isset($_POST["btOK"])){
             <br><br>
 
             Gioi tinh : <br>
-            <input type="radio" name="gender" id="gender_male" checked> nam
-            <input type="radio" name="gender" id="gender_female"> nu
+            <input type="radio" name="gender" id="gender_male" checked value="1"> nam
+            <input type="radio" name="gender" id="gender_female" value="0"> nu
             <br><br>
 
             Ngay sinh : <br>
