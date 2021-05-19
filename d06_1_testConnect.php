@@ -1,18 +1,13 @@
 <?php 
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "db2008a0";
 
-//goi ham tao ket noi den csdl [db2008a0] cua mySQL
-$cn = mysqli_connect($host,$username,$password, $dbname);
+//nhung chuong trinh co ham connectDB
+include_once("myLib.php");
 
-if($cn){
-    echo "<h2>Ket noi thanh cong !</h2>";
-}
-else{
-    echo "<h2>THAT BAI ROI ! </h2>";
-    mysqli_connect_error();
-}
+$cn = connectDB();
+
+echo "<h2>Connect DB [db2008a0] thanh cong !</h2>";
+
+disconnectDB($cn);
+
 
 ?>
