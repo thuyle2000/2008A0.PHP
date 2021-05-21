@@ -59,7 +59,7 @@ if (isset($_GET["id"])) {
                     echo "<td>" . ($sv["gender"] ? "nam" : "nu") . "  </td>";
                     echo "<td>" . $sv["dob"] . "  </td>";
                     echo "<td>";
-                    echo "<a href='d07_student_update.php?id={$sv['student_id']}'>update</a> | ";
+                    echo "<a href='d07_student_edit.php?id={$sv['student_id']}'>update</a> | ";
                     echo "<a href='d07_student_index.php?id={$sv['student_id']}' 
                     onclick='return confirm(\"Are u sure ?\")'>delete</a>";
                     echo "</td>";

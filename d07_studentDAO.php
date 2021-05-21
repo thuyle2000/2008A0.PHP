@@ -2,6 +2,29 @@
 include_once "myLib.php";
 
 //ham lay danh sach sinh vien trong bang [tbstudent]
+function getStudentByID($id){
+    $cn = connectDB();  //ket noi voi DB [db2008A0]
+
+    //lay du lieu trong bang [tbStudent] co ma so id -> $result
+    $sql = "select * from tbStudent where student_id= '$id' ";
+    $result = mysqli_query($cn, $sql);
+
+    if ($result == false) {
+        die("<h3>Not Found !<h3>");
+    }
+
+    //khai bao bien a chua 1 dong du lieu trong result 
+    $a = array();
+
+    while ($sv = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+        $a = $sv;
+    }
+
+    disconnectDB($cn);
+    return $a;
+}
+
+//ham lay danh sach sinh vien trong bang [tbstudent]
 function getStudentList(){
     $cn = connectDB();  //ket noi voi DB [db2008A0]
 
@@ -23,6 +46,7 @@ function getStudentList(){
     disconnectDB($cn);
     return $a;
 }
+
 
 
 //ham them 1 sinh vien moi vo bang [tbstudent]
