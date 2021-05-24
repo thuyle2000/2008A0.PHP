@@ -73,34 +73,34 @@ class Book
         return $a;
     }
 
-        //ham lay danh muc sach theo don gia trong bang [tbBook]
-        public static function getListPrice($from , $to)
-        {
-            $cn = connectDB();  //ket noi voi DB [db2008A0]
-    
-            //doc het du lieu trong bang [tbbook] -> $result
-            $sql = "SELECT * FROM `tbbook` WHERE (`price`>=$from AND `price`<=$to)";
-            $result = $cn->query($sql);     // $result = mysqli_query($cn, $sql);
-    
-    
-            if ($result == false) {
-                die("<h3>Data Not Found !<h3>");
-            }
-    
-            //khai bao mang a[] chua cac dong du lieu trong result 
-            $a = array();
-    
-            while ($row = $result->fetch_assoc()) {
-                $a[] = $row;
-            }
-    
-            // while ($sv = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            //     $a[] = $sv;
-            // }
-    
-            $cn->close();   // disconnectDB($cn);
-            return $a;
+    //ham lay danh muc sach theo don gia trong bang [tbBook]
+    public static function getListPrice($from, $to)
+    {
+        $cn = connectDB();  //ket noi voi DB [db2008A0]
+
+        //doc het du lieu trong bang [tbbook] -> $result
+        $sql = "SELECT * FROM `tbbook` WHERE (`price`>=$from AND `price`<=$to)";
+        $result = $cn->query($sql);     // $result = mysqli_query($cn, $sql);
+
+
+        if ($result == false) {
+            die("<h3>Data Not Found !<h3>");
         }
+
+        //khai bao mang a[] chua cac dong du lieu trong result 
+        $a = array();
+
+        while ($row = $result->fetch_assoc()) {
+            $a[] = $row;
+        }
+
+        // while ($sv = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        //     $a[] = $sv;
+        // }
+
+        $cn->close();   // disconnectDB($cn);
+        return $a;
+    }
 
 
     //ham them 1 quyen sach moi vo bang [tbbook]
