@@ -1,22 +1,23 @@
-<?php 
+<?php
 include_once "myLib.php";
 
-class Customer{
+class Customer
+{
     public $accNo, $custName, $custAdd, $accType, $balance, $password;
 
-    public function __construct($accNo=null, $custName=null, $custAdd=null, $accType="SA", $balance="5000", $password="123")
+    public function __construct($accNo = null, $custName = null, $custAdd = null, $accType = "SA", $balance = "5000", $password = "123")
     {
         $this->accNo = $accNo;
         $this->custName = $custName;
-        $this->custAdd = $custName;
+        $this->custAdd = $custAdd;
         $this->accType = $accType;
         $this->balance = $balance;
-        $this->password= $password;
-
+        $this->password = $password;
     }
 
 
-    public static function getByAccNo($accno){
+    public static function getByAccNo($accno)
+    {
         $cn = connectDB();  //ket noi voi DB [db2008A0]
 
         //tim mau tin trong bang [customeracc] co ma so [$accno] -> $a
@@ -39,9 +40,17 @@ class Customer{
         return $a;
     }
 
+    //ham them 1 quyen sach moi vo bang [customeracc]
+    public static function create(Customer $cust)
+    {
+        $cn = connectDB();  //ket noi voi DB [db2008A0]
 
+        //chen du lieu cua $cust vo trong bang [customeracc] 
+        $sql = "INSERT INTO `customeracc` (`AccountNo`, `CustName`, `CustAddress`, `AccType`, `BalAmount`, `Password`) VALUES ('$cust->accNo', '$cust->custName', '$cust->custAdd', '$cust->accType', '$cust->balance', '$cust->password')";
+
+        $result = $cn->query($sql);
+        $cn->close();
+
+        return $result;
+    }
 }
-
-
-
-?>

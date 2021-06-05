@@ -16,9 +16,15 @@ if (isset($_SESSION["customer"]) == false) {
         }
         exit;
     }
+    else if (isset($_GET["btOUT"])){
+        unset($_SESSION["customer"]);
+        echo "<h2>UNSET </h2>";
+        // echo '<script> document.location = "pretest1-index.php" ; </script>';
+        header("location:pretest1-index.php");
+
+        exit;
+    }
 }
-
-
 
 
 ?>
@@ -78,7 +84,7 @@ if (isset($_SESSION["customer"]) == false) {
                     </div>
 
 
-                    <button type="submit" class="btn btn-danger" name="btOK">Submit</button>
+                    <button type="submit" class="btn btn-danger" name="btOUT" id="btOUT">Log out</button>
 
                 </form>
 
@@ -97,24 +103,40 @@ if (isset($_SESSION["customer"]) == false) {
                         maTK: accno,
                         btOK: 1
                     },
+                    dataType: "json",
                     success: function(response) {
-
-                        data = response + "";
+                        data = response ;
                         if (data == "1") {
                             alert("Invalid account !");
+                            $("#custname").val("")
+                            $("#custAddress").val("")
+                            $("#accType").val("")
+                            $("#balance").val("")
                         } else {
                             // console.log(data);
                             // console.log(data.AccountNo);
-                            data = JSON.parse(data);
+                            // data = JSON.parse(data);
                             $("#custname").val(data.CustName)
                             $("#custAddress").val(data.CustAddress)
-                            $("#accType").val(data.AccType)
+                            if(data.AccType=="SA"){
+                                $("#accType").val("Saving Account")
+                            }
+                            else{
+                                $("#accType").val("Current Account")
+                            }
                             $("#balance").val(data.BalAmount)
                         }
 
                     }
                 });
             });
+
+            // $("#btOUT").click(function (e) { 
+            //     $.ajax({
+            //         type: "GET",
+            //         data: {btOUT:1}
+            //     });
+            //  });
         });
     </script>
 </body>

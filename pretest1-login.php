@@ -11,7 +11,8 @@ if(isset($_POST["btOK"])){
      if($r){
         if($r["Password"]==$pwd){
             $_SESSION["customer"] = $r;
-            header("location:pretest1-detailAcc.php");
+            // header("location:pretest1-detailAcc.php");
+             header("location:detailAcc.php");
         }
         else{
             echo "<h3>Mat khau ko dung !!! <h3>";
@@ -40,7 +41,7 @@ if(isset($_POST["btOK"])){
 
 <body>
     <div class="container">
-        <h2>Welcone to Netbank Ltd</h2>
+        <h2>Welcome to Netbank Ltd</h2>
         <hr>
 
         <div class="row">

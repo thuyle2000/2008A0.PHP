@@ -1,3 +1,32 @@
+<?php 
+//xu ly du lieu nhap cua form create phia server
+if(isset($_POST["btOK"])){
+    // form da duoc submit
+
+    $accno = $_POST["accno"];
+    $custname = $_POST["custname"];
+    $custAddress = $_POST["custAddress"];
+    $accType = $_POST["accType"];
+    $balance = $_POST["balance"];
+    $password = $_POST["password"];
+
+    include_once "pretest1-customerDAO.php";
+    $b = new Customer($accno,$custname,$custAddress,$accType,$balance,$password);
+    if (Customer::create($b)){
+        header("location:pretest1-login.php");
+    }
+    else{
+        echo "<h2>Error : Create new Customer Failed !!! </h2> <br>";
+    }
+    
+    exit();
+
+} 
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +43,7 @@
 
 <body>
     <div class="container">
-        <h2>Welcone to Netbank Ltd</h2>
+        <h2>Welcome to Netbank Ltd</h2>
         <hr>
 
         <div class="row">
