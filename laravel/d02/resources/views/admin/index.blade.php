@@ -10,12 +10,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .login{
+            text-align: right;
+        }
+        .login a{
+            padding: .2rem .5rem;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="container">
         <h2>List of Users</h2>
         <hr>
+        <div class="login">
+            <a href="{{url('logout')}}" class="btn btn-info">Logout</a>
+        </div>
+
         <a href="{{url("admin/create")}}">Create New User</a>
         <table class="table table-hover">
             <thead>
