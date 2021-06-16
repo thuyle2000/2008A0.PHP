@@ -5,7 +5,7 @@
 <h2>List of Books</h2>
 <hr>
 <div>
-    <a href="">Create New Book</a>
+    <a href="{{url('/admin/book/create')}}">Create New Book</a>
 </div>
 
 <table class="table table-hover" id="book">
@@ -26,8 +26,8 @@
                 <td> {{$item->author}}</td>
                 <td> <img src="{{asset("images/$item->picture")}}" alt="" class='pic-in-list' > </td>
                 <td><a href="">View</a> |
-                <a href="">Edit</a> |
-                <a href="">Delete</a></td>
+                <a href="{{url("/admin/book/edit/{$item->id}")}}">Edit</a> |
+                <a href="{{url("/admin/book/delete/{$item->id}")}}">Delete</a></td>
             </tr>
         @endforeach
     </tbody>

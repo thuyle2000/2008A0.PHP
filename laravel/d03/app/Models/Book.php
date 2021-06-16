@@ -11,4 +11,6 @@ class Book extends Model
 
     protected $table='tbbook';
     protected $fillable = ['id','title','author','picture','price','edition'];
+    public $timestamps = false;  // remove update_at, create_at in SQL insert/update query
+
 }
