@@ -13,7 +13,12 @@ namespace d02_statements
             //demoIF();
             //demoIF2();
             //demoIF3();
-            demoSwitch();
+            //demoSwitch();
+
+            DemoLoop demo = new DemoLoop();
+            //demo.testFOR();
+            //demo.testWHILE();
+            demo.testFOREACH();
         }
 
         static void demoIF()
