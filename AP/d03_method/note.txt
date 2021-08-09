@@ -1,0 +1,8 @@
+﻿1. Lap trinh Method
+- Method co tham so tuy chon
+- Method co tham so truyen theo dia chi tham chieu (ref , out: ko can khoi tao truoc khi goi ham)
+- Method static (Main)
+- Bo tu truy cap (public / protected / private: default / internal: pham vi su dung trong assembly:project)
+- Method overloading:
+	cac phuong thuc cung ten, khac signature, ben trong 1 class
+- constructors(no-para, para:overload, static, default) / destructor : vi du class Student=> ~Student()
