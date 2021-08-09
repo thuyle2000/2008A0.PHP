@@ -1,0 +1,22 @@
+﻿1. Ke thua - inheritance 
+- cho phep tao 1 lop moi, thua ke cac dac tinh, phuong thuc cua lop da co truoc (ko bi danh dau "private"). 
+- ke thua trong c# la ke thua don
+- de truy cap cac thanh phan tren lop cha, su dung tu khoa "base".
+- ky hieu ke thua trong trong c# la dau : (trong java la "extends")
+
+
+2. lap trinh phuong thuc override:
+- trong lop con, lap trinh lai mot phuong thuc da co tren lop cha: goi la lap trinh override.
+- dieu kien : 
+	phuong thuc o lop cha phai danh dau ky hieu "virtual"
+	phuong thuc o lop con, danh dau ky hieu "override"
+
+3. sealed : niem phong (java : final)
+- ap dung voi class => ko cho phep ke thua
+- ap dung voi method => ko cho phep override
+
+
+4. da hinh - polymorphism 
+co 2 hinh thuc lap trinh da hinh:
+- lap trinh ham overload
+- lap trinh ham override
