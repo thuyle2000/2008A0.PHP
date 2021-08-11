@@ -1,0 +1,13 @@
+﻿Property la khai niem dat biet (doi khi con duoc goi la contro), 
+- tao ra 1 mask bao ve cac private fields ben trong class
+- gom 1 bo getter va setter:
+	getter : lay gia tri cua private field (return)
+	setter : gan gia tri cua property (value - sau khi dc kiem tra) cho private field
+- co cung kieu du lieu voi private field
+- co 3 loai:
+	read-write : getter va setter
+	read-only : getter
+	write-only : setter
+
+Auto-implement Property : ko gan lien ket voi bat ky private field.
+Object initializer : Bo khoi tao cac gia tri cua fields trong 1 doi tuong ma ko can ham dung
