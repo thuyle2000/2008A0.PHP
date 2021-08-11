@@ -1,0 +1,11 @@
+﻿1. abstract class : 
+- lop truu tuong (lop cha chua hoan chinh) chua mot so phuong thuc truu tuong (ko co phan than).
+- duoc ke thua boi cac lop con - de lap trinh (override) cac phuong thuc truu tuong
+- co the co ham dung / ham huy
+- toan tu is hoac as duoc su dung de biet kieu du lieu cua 1 doi tuong 
+
+
+2. interface:
+- lop thuan truu tuong, vi chi chua cac phuong thuc truu tuong
+- duoc cac lop khac hien thuc cac phuong thuc truu tuong
+- 1 lop bat ky co the hien thuc / cai dat nhieu interface
