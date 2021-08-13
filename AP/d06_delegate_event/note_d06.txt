@@ -1,0 +1,3 @@
+﻿1. delegate:
+	= con tro ham , kieu doi tuong , chua dia chi cua ham khac co cung signature va kieu return voi no.
+	- cu phap : <acc_modifier> delegate <ret_type> DelegateName([parameters]); 
